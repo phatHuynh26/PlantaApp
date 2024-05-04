@@ -12,7 +12,7 @@ const Category = () => {
     const uaBong = products.filter(product => {
         return product.description === 'Ưa bóng';
     });
-    console.log(uaSang);
+    
     useEffect(() => {
         const getData = async () => {
             try {
@@ -31,7 +31,7 @@ const Category = () => {
         shadeLoving: 'white',
         sunLoving: 'white'
     });
-    const [dataToShow, setDataToShow] = useState(products); // State để lưu trữ dữ liệu hiển thị
+    const [dataToShow, setDataToShow] = useState(products); 
     const handlePress = (buttonType) => {
         const updatedColors = {
             all: 'white',
@@ -107,7 +107,6 @@ const Category = () => {
             <FlatList
                 style={{ marginTop: 30 }}
                 data={dataToShow}
-                // keyExtractor={(item) => item.id.toString()}
                 renderItem={renderItem}
                 numColumns={2}
             >

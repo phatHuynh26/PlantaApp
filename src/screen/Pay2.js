@@ -122,10 +122,7 @@ const Pay2 = ({ route }) => {
 
             </View
             >
-            <View style={styles.view}>
-                <Text style={styles.title}>Phương thức vận chuyển</Text>
-                <Text style={styles.text}>Nhập thông tin thẻ</Text>
-            </View>
+            
             <View style={{ marginTop: 30, marginLeft: 30 }}>
                 <View style={{ flexDirection: "row", marginTop: 10, alignContent: "space-between" }}>
                     <Text>Tạm tính</Text>

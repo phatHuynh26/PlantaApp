@@ -1,7 +1,11 @@
 import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native'
 import React from 'react'
-
+import { useSelector} from 'react-redux'
 const EditProfile = () => {
+  const appState = useSelector(state => state.app)
+  const name =appState.user.name
+  const email = appState.user.email
+  const number = appState.user.phonenumber
   return (
     <View>
       <View style={styles.header}>
@@ -22,22 +26,17 @@ const EditProfile = () => {
       <View style={styles.viewInput}>
         <TextInput
           style={styles.input}
-          placeholder='Trần Minh Trí'
+          placeholder={name}
           placeholderTextColor="grey"
         ></TextInput>
         <TextInput
           style={styles.input}
-          placeholder='tranminhtri@gmail.com'
+          placeholder={email}
           placeholderTextColor="grey"
         ></TextInput>
         <TextInput
           style={styles.input}
-          placeholder='Hồ Chí Minh'
-          placeholderTextColor="grey"
-        ></TextInput>
-        <TextInput
-          style={styles.input}
-          placeholder='0899320076'
+          placeholder={number}
           placeholderTextColor="grey"
         ></TextInput>
       </View>

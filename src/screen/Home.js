@@ -7,7 +7,6 @@ const Home = ({ navigation }) => {
 
     const handleProductPress = (id) => {
         navigation.navigate('chitiet', { id: id });
-        // console.log(id);
     };
 
     const [products, setProducts] = useState([])

@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const AxiosInstance = (contentType = 'application/json') => {
     const axiosInstance = axios.create({
-        baseURL: 'http://172.16.69.198:2610/'
+        baseURL: 'http://192.168.0.106:2610/'
         // 192.168.4.215 lava
         //172.16.70.69 truowng
         // nha    

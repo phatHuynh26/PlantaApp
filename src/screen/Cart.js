@@ -36,9 +36,6 @@ const Cart = () => {
   const handleDelete = () => {
     setModalDeleteVisible(!modaDeletelVisible)
   }
-
-
-
   const ModalDelete = () => {
     const handleDeleteProduct = async () => {
       try {
@@ -46,7 +43,10 @@ const Cart = () => {
           // email:'test',    
           email: mail,
         });
-        if (response.data.status == true) {
+        if(response.status.cart == null){
+          alert('Không có sản phẩm')
+        }
+        else if (response.data.status == true) {
           console.log("xóa thành công");
         } else {
           alert('xóa sản phẩm trong giỏ hàng không thành công')
@@ -88,12 +88,11 @@ const Cart = () => {
         email: mail,
         id: id,
       });
-
-      if (response.data.status === true) {
+        if (response.data.status === true) {
         console.log(response.data.status);
         alert("xóa thành công")
-      } else {
-        alert('Thêm vào giỏ hàng không thành công');
+      } else  {
+        alert('Xoa giỏ hàng không thành công');
       }
 
     } catch (error) {

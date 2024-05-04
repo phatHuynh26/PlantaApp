@@ -25,10 +25,10 @@ const Pay = ({ route }) => {
     }
   };
   const handleNext = () => {
-    if (address =='') {
+    if (address == '') {
       ToastAndroid.show('Hãy nhập địa chỉ', ToastAndroid.SHORT);
     } else {
-      navigation.navigate("thanhtoan2", { nameU, email, phonenumber, address ,Total})
+      navigation.navigate("thanhtoan2", { nameU, email, phonenumber, address, Total })
 
     }
   }
@@ -60,18 +60,18 @@ const Pay = ({ route }) => {
           <TouchableOpacity onPress={() => { handleClickCard(1) }}>
             <Text style={[styles.cost, { color: textCard }]}>Giao hàng nhanh - 15 000đ</Text>
           </TouchableOpacity>
-          <Text style={styles.time}>Dự kiến giao hàng 5-7/9</Text>
+          <Text style={styles.time}>Dự kiến giao hàng trong 3 ngày</Text>
         </View>
         <View style={styles.cod}>
           <TouchableOpacity onPress={() => { handleClickCard(2) }}>
-            <Text style={[styles.cost, { color: textCard2 }]}>Giao hàng nhanh - 15 000đ</Text></TouchableOpacity>
-          <Text style={styles.time}>Dự kiến giao hàng 5-7/9</Text>
+            <Text style={[styles.cost, { color: textCard2 }]}>Giao hàng hỏa tốc - 15 000đ</Text></TouchableOpacity>
+          <Text style={styles.time}>Dự kiến giao hàng trong ngày</Text>
         </View>
 
         <View style={styles.payOptions}>
           <Text style={styles.titleInfo}>Hình thức thanh toán</Text>
           <Text style={styles.payText}>Thẻ visa</Text>
-          <Text style={styles.payText}>Thanh toán khi nhận hàng</Text>
+          <Text style={styles.payText2}>Thanh toán khi nhận hàng</Text>
         </View>
       </View>
       <View style={{ marginLeft: 30 }}>
@@ -132,7 +132,10 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   payText: {
-    fontFamily: "Lato-Regular", fontSize: 18, color: "black", width: 279, height: 30, marginTop: 10
+    fontFamily: "Lato-Regular", fontSize: 18, color: "red", width: 279, height: 30, marginTop: 10, fontWeight: "bold"
+  },
+  payText2: {
+    fontFamily: "Lato-Regular", fontSize: 18, color: "grey", width: 279, height: 30, marginTop: 10
   },
   buttonPay: {
     backgroundColor: "#007537", height: 50, width: "90%", alignSelf: "center", borderRadius: 8, marginTop: 10
